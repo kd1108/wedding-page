@@ -8,6 +8,7 @@ body {
 
 h1, h2 {
     color: #007bff;
+    font-family: 'Lobster', cursive;
 }
 
 #home {
@@ -36,4 +37,14 @@ audio {
 
 .navbar {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.countdown-timer {
+    font-size: 2.5rem;
+    font-family: 'Lobster', cursive;
+    color: #ff4081;
+    background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+    padding: 10px 20px;
+    border-radius: 8px;
+    display: inline-block;
 }
