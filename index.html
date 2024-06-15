@@ -4,26 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Wedding</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>We Are Getting Married!</h1>
-        <div id="timer"></div>
-        <div class="gallery">
-            <h2>Engagement Ceremony</h2>
-            <div class="images">
-                <img src="images/photo1.jpg" alt="Engagement Photo 1">
-                <img src="images/photo2.jpg" alt="Engagement Photo 2">
-                <img src="images/photo3.jpg" alt="Engagement Photo 3">
-                <!-- Add more images as needed -->
-            </div>
-        </div>
-        <audio controls autoplay loop>
-            <source src="music/background.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Our Wedding</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#engagement">Engagement</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#countdown">Countdown</a>
+            </li>
+        </ul>
     </div>
-    <script src="script.js"></script>
+</nav>
+
+<div class="container mt-5" id="home">
+    <div class="text-center">
+        <h1 class="display-4">We Are Getting Married!</h1>
+        <p class="lead">Join us for our special day.</p>
+    </div>
+</div>
+
+<div class="container mt-5" id="countdown">
+    <div class="text-center">
+        <h2>Countdown to Our Big Day</h2>
+        <div id="timer" class="display-4 my-4"></div>
+    </div>
+</div>
+
+<div class="container mt-5" id="engagement">
+    <div class="text-center">
+        <h2>Engagement Ceremony</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <img src="images/photo1.jpg" class="img-fluid rounded" alt="Engagement Photo 1">
+            </div>
+            <div class="col-md-4">
+                <img src="images/photo2.jpg" class="img-fluid rounded" alt="Engagement Photo 2">
+            </div>
+            <div class="col-md-4">
+                <img src="images/photo3.jpg" class="img-fluid rounded" alt="Engagement Photo 3">
+            </div>
+            <!-- Add more images as needed -->
+        </div>
+    </div>
+</div>
+
+<audio controls autoplay loop class="w-100 mt-5">
+    <source src="music/background.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
