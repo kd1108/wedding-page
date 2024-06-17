@@ -12,31 +12,82 @@ h1, h2 {
 }
 
 #home {
-    background: url('images/background.jpg') no-repeat center center/cover;
-    color: white;
-    padding: 100px 0;
+    background-color: #f6e7e9; /* Light pink background */
+    padding: 60px 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#home h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: #c94c4c; /* Romantic red color */
+}
+
+#home p {
+    font-size: 1.5rem;
+    color: #6d6d6d; /* Gray color for additional text */
+    margin-bottom: 40px;
+}
+
+#home .btn-primary {
+    background-color: #c94c4c; /* Romantic red color for button */
+    border-color: #c94c4c; /* Border color */
+}
+
+#home .btn-primary:hover {
+    background-color: #af3d3d; /* Darker shade on hover */
+    border-color: #af3d3d;
 }
 
 #countdown {
-    background-color: #ffffff;
-    padding: 50px 0;
+    background-color: #ffe6ea; /* Soft pink background */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
-
+#countdown p {
+    font-size: 1.2rem;
+    color: #6d6d6d; /* Gray color for additional text */
+}
 #engagement {
     background-color: #f5f5f5;
     padding: 50px 0;
 }
 
-.gallery .col-md-4 {
-    margin-bottom: 30px;
+.cylinder-carousel {
+    position: relative;
+    perspective: 1000px;
+    height: 300px; /* Adjust the height as needed */
 }
 
-audio {
-    margin-top: 30px;
+
+
+#carousel img {
+    position: absolute;
+    width: 200px; /* Adjust image size as needed */
+    height: auto;
+    transform-origin: center center -300px; /* Adjust this value to set the radius */
 }
 
-.navbar {
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+@keyframes rotate {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+.modal {
+    text-align: center;
+}
+
+#timer {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: #c94c4c; /* Romantic red color */
 }
 
 .countdown-timer {
@@ -47,4 +98,57 @@ audio {
     padding: 10px 20px;
     border-radius: 8px;
     display: inline-block;
+}
+
+
+.navbar {
+    background-color: #f9e2e5; /* Soft pink background */
+}
+
+.navbar-brand {
+    font-family: 'Lobster', cursive;
+    font-size: 2rem;
+    color: #c94c4c; /* Romantic red color */
+}
+
+.navbar-brand:hover {
+    color: #5f0000; /* Hover color */
+}
+
+.navbar-nav .nav-link {
+    color: #c94c4c; /* Gray color for links */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #5f0000; /* Hover color */
+}
+
+.romantic-bg {
+    background-color: #f6e7e9; /* Light pink background */
+    padding: 60px 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+#engagement h2 {
+    font-size: 3rem;
+    color: #c94c4c; /* Romantic red color */
+    font-family: 'Lobster', cursive;
+    margin-bottom: 40px;
+}
+
+#carousel {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    animation: rotate 20s infinite linear;
+}
+
+.carousel-img {
+    max-width: 100%;
+    height: auto;
+    margin: 0 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
