@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AraKul Wedding</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js" async></script>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="#">AraKul Wedding</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#engagement">Engagement</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#countdown">Countdown</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+<div class="container mt-5" id="home">
+    <div class="text-center">
+        <h1 class="display-4">We Are Getting Married!</h1>
+        <p class="lead">Join us for our special day filled with love, laughter, and happily ever after.</p>
+        <a href="#engagement" class="btn btn-primary btn-lg mt-3">Explore</a>
+    </div>
+</div>
+
+<div class="container mt-5" id="countdown">
+    <div class="text-center">
+        <h2>Countdown to Our Big Day</h2>
+        <div id="timer" class="countdown-timer display-4 my-4"></div>
+        <p class="lead">Until we say "I do" and begin our forever together...</p>
+    </div>
+</div>
+
+<div class="container-fluid romantic-bg mt-5" id="engagement">
+    <div class="text-center">
+        <h2 class="mt-5">Engagement Ceremony</h2>
+        <div id="carousel" class="carousel mt-4">
+            <!-- Images will be appended here by JavaScript -->
+             <img src="./images/DSC_6266.JPG"/>
+             <img src="./images/DSC_6270.JPG"/>
+             <img src="./images/DSC_6291.JPG"/>
+        </div>
+        <h5>More Pictures Coming Soon</h5>
+    </div>
+</div>
+
+<!-- Modal for background music -->
+<div class="modal fade" id="musicModal" tabindex="-1" aria-labelledby="musicModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="musicModalLabel">Play Background Music</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <button id="startMusicButton" class="btn btn-primary">Start Music</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<audio id="backgroundAudio" loop>
+    <source src="music/background.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js" async></script>
+
+</body>
+</html>
