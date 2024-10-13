@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         const img = document.createElement('img');
-        img.src = `images/ourpics/${filename}`;
+        img.src = `images/${filename}`;
         img.classList.add('d-block', 'w-100');
         img.alt = `Photo ${index + 1}`;
 
