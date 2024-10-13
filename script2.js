@@ -11,16 +11,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Method to dynamically load images from the specified array
     const imageFilenames = [
-        'photo1.jpg',
-        'photo2.jpg',
-        'photo3.jpg',
-        'photo4.jpg', 
-        'photo5.jpg',
-        'photo6.jpg',
-        'photo7.jpg',
-        'photo8.jpg', 
-        'photo9.jpg', 
-        'photo10.jpg'
+        'photo1.JPG',
+        'photo2.JPG',
+        'photo3.JPG',
+        'photo4.JPG', 
+        'photo5.JPG',
+        'photo6.JPG',
+        'photo7.JPG',
+        'photo8.JPG', 
+        'photo9.JPG', 
+        'photo10.JPG'
     ];
 
     // Reference to the carousel inner container where images will be added
