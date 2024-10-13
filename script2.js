@@ -1,23 +1,67 @@
-
-
-document.getElementById('open-card').addEventListener('click', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Show the modal on page load
     $('#musicModal').modal('show');
 
     // Event listener for the modal button
-    $('#startMusicButton').on('click', function() {
+    $('#startMusicButton').on('click', function () {
         var audio = document.getElementById('backgroundAudio');
         audio.play();
         $('#musicModal').modal('hide');
     });
-    document.getElementById('card-front').classList.add('d-none');
 
-    // Show mantra GIF for a transition effect
-    document.getElementById('mantra-container').classList.remove('d-none');
-    setTimeout(function() {
-        document.getElementById('mantra-container').classList.add('d-none');
-        document.getElementById('card-inside').classList.remove('d-none');
-    }, 500);  // Adjust time as needed
+    // Method to dynamically load images from the specified array
+    const imageFilenames = [
+        'photo1.jpg',
+        'photo2.jpg',
+        'photo3.jpg',
+        'photo4.jpg', 
+        'photo5.jpg',
+        'photo6.jpg',
+        'photo7.jpg',
+        'photo8.jpg', 
+        'photo9.jpg', 
+        'photo10.jpg'
+    ];
+
+    // Reference to the carousel inner container where images will be added
+    const carouselInner = document.querySelector('.carousel-inner');
+
+    // Clear existing static items if any
+    carouselInner.innerHTML = '';
+
+    // Loop through the image filenames and dynamically create carousel items
+    imageFilenames.forEach((filename, index) => {
+        const carouselItem = document.createElement('div');
+        carouselItem.classList.add('carousel-item');
+
+        if (index === 0) {
+            carouselItem.classList.add('active'); // Set the first item as active
+        }
+
+        const img = document.createElement('img');
+        img.src = `images/ourpics/${filename}`;
+        img.classList.add('d-block', 'w-100');
+        img.alt = `Photo ${index + 1}`;
+
+        carouselItem.appendChild(img);
+        carouselInner.appendChild(carouselItem);
+    });
+
+    // Add event listener for the "Open Invitation" button
+    document.getElementById('open-card').addEventListener('click', function() {
+        document.getElementById('card-front').classList.add('d-none');
+
+        // Show mantra GIF for a transition effect
+        document.getElementById('mantra-container').classList.remove('d-none');
+        setTimeout(function() {
+            document.getElementById('mantra-container').classList.add('d-none');
+            document.getElementById('card-inside').classList.remove('d-none');
+        }, 500);  // Adjust time as needed
+    });
+
+    // Initial call to countdown function
+    countdown();
+    const interval = setInterval(countdown, 1000);
 });
 
 function countdown() {
@@ -30,12 +74,13 @@ function countdown() {
     const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    document.getElementById('timer').innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+    const timerElement = document.getElementById('timer');
 
-    if (distance < 0) {
+    if (distance > 0) {
+        timerElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+    } else {
         clearInterval(interval);
-        document.getElementById('timer').innerHTML = "The Wedding Day is Here!";
+        document.querySelector('.countdown').style.display = 'none'; // Hide countdown heading
+        timerElement.innerHTML = "Happily Married!"; // Show happy message
     }
 }
-
-const interval = setInterval(countdown, 1000);

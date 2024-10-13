@@ -99,3 +99,22 @@ body.marriage-theme {
 .modal {
     text-align: center;
 }
+
+/* Banner Styles */
+.banner {
+    background-color: #f18888;
+    padding: 30px;
+    margin-bottom: 20px;
+}
+
+.banner-text {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3em;
+    color: #fff;
+}
+
+.banner-subtext {
+    font-family: 'Lobster', cursive;
+    font-size: 1.5em;
+    color: #fff;
+}
