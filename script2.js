@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function () {
 function countdown() {
     const weddingDate = new Date('2024-11-22T00:00:00').getTime();
     const now = new Date().getTime();
-    const distance = weddingDate - now;
+    const distance = now - weddingDate;
 
     const days = Math.floor(distance / (1000 * 60 * 60 * 24));
     const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
@@ -76,11 +76,6 @@ function countdown() {
 
     const timerElement = document.getElementById('timer');
 
-    if (distance > 0) {
-        timerElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
-    } else {
-        clearInterval(interval);
-        document.querySelector('.countdown').style.display = 'none'; // Hide countdown heading
-        timerElement.innerHTML = "Happily Married!"; // Show happy message
-    }
+    
+    timerElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
 }
